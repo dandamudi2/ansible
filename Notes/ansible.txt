@@ -1,0 +1,40 @@
+Install ansible in aws EC2 instance
+
+> sudo dnf install ansible -y
+
+
+To Execute ansible playbook:
+===================================
+ansibile-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 01-ping.yaml
+
+variables
+conditionals
+data types
+loops
+functions
+
+
+#variable declaration
+============================
+COURSE = "Devops with AWS"
+DURATION = "120HRS"
+TRAINER = "Sivakumar reddy"
+
+
+try not to change anything in sourcefiles. Why ? because you may accidentally change other code ....
+
+How to pass arguments to the ansible play book through command lane:
+=====================================================================
+
+>ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 09-vars-from-args.yaml -e "NAME=Ramesh GREETING=Morning"
+
+
+Variable values hierarchy:
+========================
+#1. command line/args
+#2. Task level
+#3. Files
+#4. Prompt
+#5. play
+#6. inventory
+#7. Roles
